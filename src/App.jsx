@@ -1,15 +1,25 @@
 import { format } from 'date-fns'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const currentDate = new Date();
+  const [currentDate, setCurrentDate] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentDate(new Date())
+      }, 1000)
+
+    return () => clearInterval(timer)
+  }, [])
 
   return (
     <main>
-      <h1>Dynamic Color Clock</h1>
-      <p>{format(currentDate, 'MMMM d, yyyy h:mm a')}</p>
+      <div className="clock-card">
+        <p>{format(currentDate, 'MMMM d, yyyy h:mm:ss a')}</p>
+      </div>
     </main>
-  )
+    )
 }
 
 export default App
