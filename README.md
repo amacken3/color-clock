@@ -1,16 +1,47 @@
-# React + Vite
+# Color Clock
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Color Clock is a React application built with Vite that displays the current date and time inside a styled card. The app uses the `date-fns` package to format the date and time and updates every second.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project was created as a React lab assignment. The goal of the project is to:
 
-## React Compiler
+- build a React application using Vite
+- manage dependencies with npm
+- use the `date-fns` package to format the current date and time
+- create a dynamic clock that updates live
+- style the app with CSS so it looks visually appealing
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Displays the current date and time
+- Updates automatically every second
+- Uses `date-fns` for formatting
+- Includes a styled centered card layout
+- Uses a blue gradient background
+- Uses React hooks for live updates
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- React
+- Vite
+- JavaScript
+- CSS
+- date-fns
+
+## How to Get the Project Running
+
+Follow these steps to run the project on your computer.
+
+### 1. Clone the repository
+
+```bash
+git clone git@github.com:amacken3/color-clock.git
+
+cd color-clock
+
+npm install 
+
+npm install date-fns@2.30.0
+
+npm run dev
